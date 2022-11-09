@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 const links = [
+  { text: 'Home', path: '/' },
   { text: 'Simple Animation', path: '/simple' },
   { text: 'List Animation', path: '/list' },
   { text: 'Logic Gates', path: '/gates' }
