@@ -1,7 +1,7 @@
-
-export default function Home() {
-    return (
-      <p className="text-3xl">Hello world from tailwidncss</p>
-    )
-  }
-  
+export default function HomePage() {
+  return (
+    <div>
+      <h1>home page</h1>
+    </div>
+  )
+}

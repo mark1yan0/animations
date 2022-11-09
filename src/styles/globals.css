@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply gradient-gray min-h-screen font-sans text-center text-white;
+}
+
+.gradient-gray {
+  @apply bg-gradient-to-t from-gray-500 to-gray-700;
+}
+
+.gradient-hot {
+  @apply bg-gradient-to-r from-orange-700 to-orange-500;
+}
+
+.box {
+  @apply w-28 h-28 rounded-3xl bg-white cursor-pointer hover:bg-gradient-to-r from-orange-700 to-orange-500;
+}
+
+.btn-primary {
+  @apply gradient-hot p-4 rounded-xl border-none cursor-pointer hover:opacity-90;
+}
