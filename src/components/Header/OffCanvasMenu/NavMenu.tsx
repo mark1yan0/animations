@@ -2,13 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { itemVariants, navVariants, underlineVariants } from '../variants';
 import Link from 'next/link';
-
-const links = [
-  { text: 'Home', path: '/' },
-  { text: 'Simple Animation', path: '/simple' },
-  { text: 'List Animation', path: '/list' },
-  { text: 'Logic Gates', path: '/gates' },
-];
+import LINKS from '../../../lib/constants/routing-links';
 
 const NavMenu = () => {
   return (
@@ -16,7 +10,7 @@ const NavMenu = () => {
       variants={navVariants}
       className='h-full flex flex-col items-center justify-around overflow-hidden'
     >
-      {links.map((link, index: number) => (
+      {LINKS.map((link, index: number) => (
         <motion.li
           className='w-fit text-3xl flex flex-col'
           variants={itemVariants}

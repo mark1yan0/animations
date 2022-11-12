@@ -9,7 +9,7 @@ const OffCanvasMenu: React.FC<{ open: boolean }> = ({ open }) => {
       initial={false}
       variants={offVariants}
       animate={open ? 'opened' : 'closed'}
-      className='absolute top-0 right-0 bg-white text-black h-screen'
+      className='z-40 absolute top-0 right-0 bg-white text-black h-screen'
     >
       <NavMenu />
     </motion.nav>

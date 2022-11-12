@@ -9,7 +9,7 @@ const MenuIcon: React.FC<{
     <motion.span
       whileTap={{ scale: 0.8 }}
       onClick={clickHandler}
-      className='cursor-pointer z-10'
+      className='cursor-pointer z-50'
     >
       <HamburgerSVG open={open} />
     </motion.span>
