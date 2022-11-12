@@ -2,8 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { offVariants } from '../variants';
 import NavMenu from './NavMenu';
+import useSideNavStore from '../../../lib/store/side-nav';
 
-const OffCanvasMenu: React.FC<{ open: boolean }> = ({ open }) => {
+const OffCanvasMenu = () => {
+  const open = useSideNavStore(state => state.isOpen);
   return (
     <motion.nav
       initial={false}

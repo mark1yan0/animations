@@ -3,8 +3,10 @@ import { motion } from 'framer-motion';
 import { itemVariants, navVariants, underlineVariants } from '../variants';
 import Link from 'next/link';
 import LINKS from '../../../lib/constants/routing-links';
+import useSideNavStore from '../../../lib/store/side-nav';
 
 const NavMenu = () => {
+  const toggleMenu = useSideNavStore(state => state.toggleSideNav);
   return (
     <motion.ul
       variants={navVariants}
@@ -16,7 +18,7 @@ const NavMenu = () => {
           variants={itemVariants}
           key={link.path + index}
         >
-          <motion.span initial={false} whileHover='hover'>
+          <motion.span initial={false} whileHover='hover' onClick={toggleMenu}>
             <Link href={link.path}>{link.text}</Link>
             <motion.span
               className='w-0 h-0.5 bg-black'

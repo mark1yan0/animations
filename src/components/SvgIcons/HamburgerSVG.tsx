@@ -1,24 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import useSideNavStore from '../../lib/store/side-nav';
 
-const MenuIcon: React.FC<{
-  open: boolean;
-  clickHandler: React.MouseEventHandler<HTMLSpanElement>;
-}> = ({ clickHandler, open }) => {
-  return (
-    <motion.span
-      whileTap={{ scale: 0.8 }}
-      onClick={clickHandler}
-      className='cursor-pointer z-50'
-    >
-      <HamburgerSVG open={open} />
-    </motion.span>
-  );
-};
-
-export default MenuIcon;
-
-const HamburgerSVG: React.FC<{ open: boolean }> = ({ open }) => {
+const HamburgerSVG = () => {
+  const open = useSideNavStore(state => state.isOpen);
   return (
     <svg
       width='30px'
@@ -56,3 +40,5 @@ const HamburgerSVG: React.FC<{ open: boolean }> = ({ open }) => {
     </svg>
   );
 };
+
+export default HamburgerSVG;
