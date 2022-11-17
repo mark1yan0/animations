@@ -18,10 +18,12 @@ const MenuItem: React.FC<IMenuItemProps> = ({ link, index }) => {
       variants={itemVariants}
       key={link.path + index}
     >
-      <motion.span initial={false} whileHover='hover' onClick={toggleMenu}>
+      <motion.span whileHover='hover' onClick={toggleMenu} className='relative'>
         <Link href={link.path}>{link.text}</Link>
         <motion.span
-          className='w-0 h-0.5 bg-black'
+          initial={{ width: 0 }}
+          className='h-0.5 bg-black absolute -bottom-2 left-0'
+          layout
           variants={underlineVariants}
         ></motion.span>
       </motion.span>

@@ -42,5 +42,9 @@ export const itemVariants: Variants = {
 export const underlineVariants: Variants = {
   hover: {
     width: '100%',
+    // transition: {
+    //   type: 'spring',
+    //   stiffness: 1
+    // }
   },
 };
